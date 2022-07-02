@@ -1,7 +1,6 @@
 import React from "react"
 
 import { View, Text, StyleSheet, Image } from "react-native"
-import { TouchableOpacity } from "react-native-web";
 
 import SignIn from "../components/SignIn.jsx";
 

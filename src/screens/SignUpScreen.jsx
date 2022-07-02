@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Image } from "react-native"
 
 import SignUp from "../components/SignUp.jsx";
 
-export default function SignUpScreen() {
+export default function SignUpScreen({ navigation }) {
     return(
         <View style={styles.mainContainer}>
             <Text style={styles.header}>Uber</Text>
@@ -23,7 +23,14 @@ export default function SignUpScreen() {
             </View>
 
             <View>
-                <Text style={styles.loginContainer}>Already have an account? <Text style={styles.signInTextLink}>Sign in</Text></Text>
+                <Text style={styles.loginContainer}>Already have an account? <Text 
+
+                onPress={()=> {
+                    navigation.navigate("SignInScreen")
+                   }} 
+                
+                style={styles.signInTextLink}>Sign in
+                </Text></Text>
             </View>
             </View>
         </View>

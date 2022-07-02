@@ -4,9 +4,10 @@ import { View, StyleSheet, Text, TouchableOpacity } from "react-native"
 import { TextInput } from "react-native-web"
 
 export default function SignUp() {
+    const [border, setBorder] = React.useState("");
    return (
      <View style={styles.form}>
-          <TextInput type="text" style={styles.input}  placeholder="Username" name="username" placeholderStyle={{color: "#909090", fontFamily: "poppins-bold", fontSize: "14px"}} /> <br/>
+          <TextInput type="text" onFocus={()=> setBorder("#1E319D")} style={[styles.input, {borderColor: "#1E319D"}]} placeholder="Username" name="username" placeholderStyle={{color: "#909090", fontFamily: "poppins-bold", fontSize: "14px"}} /> <br/>
          <TextInput type="text" style={styles.input}  placeholder="Email" name="email" placeholderStyle={{color: "#909090", fontFamily: "poppins-bold", fontSize: "14px"}} /> <br/>
          <TextInput type="password" style={styles.input} placeholder="Password" name="password" placeholderStyle={{color: "#909090", fontFamily: "poppins-bold", fontSize: "14px"}} secureTextEntry={true} /> <br/>
          <TouchableOpacity style={styles.button}>
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
         width: "360px",
         height: "61px",
         marginLeft: "20px",
-        padding: "20px"
+        padding: "20px",
     },
 
     button: {
